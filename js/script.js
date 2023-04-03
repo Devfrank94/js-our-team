@@ -17,7 +17,7 @@ Organizzare i singoli membri in card/schede
 
 */
 
-const team = [
+const teamMemb = [
   {
     name: "Wayne Barnett",
     role: "Founder & CEO",
@@ -50,3 +50,13 @@ const team = [
   }
 ];
 
+const list = document.querySelector('ul')
+
+for(let person of teamMemb){
+
+  console.log('Nome',person.name, 'Ruolo',person.role, 'Immagine',person.image);
+
+  list.innerHTML += `<li>${person.name}`;
+  list.innerHTML += `<li>${person.role}`;
+  list.innerHTML += `<li><img src="img/${person.image}"></li>`;
+}
